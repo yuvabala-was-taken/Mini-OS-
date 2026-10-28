@@ -1,4 +1,4 @@
-#  Wokwi Library List
+#   Wokwi Library List
 Adafruit GFX Library
 Adafruit BusIO
 Adafruit SH110X
