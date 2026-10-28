@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Mini OS Team",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "board-grove-oled-sh1107", "id": "oled", "top": -249.83, "left": 51.1, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder", "top": 59.3, "left": -231.2, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 40.8,
+      "left": 337.8,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "oled:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "oled:SCL", "uno:A5", "green", [ "v0" ] ],
+    [ "encoder:+", "uno:5V", "red", [ "v0" ] ],
+    [ "oled:GND.1", "uno:GND.2", "black", [ "h259.2", "v432", "h-307.2" ] ],
+    [ "oled:VCC", "uno:5V", "red", [ "h249.6", "v432", "h-307.2" ] ],
+    [ "oled:SDA", "uno:A4", "green", [ "h240", "v393.6", "h-211.2" ] ],
+    [ "oled:SCL.1", "uno:A5", "yellow", [ "h230.4", "v374.4", "h-192" ] ],
+    [ "encoder:CLK", "uno:2", "green", [ "h28.8", "v-96", "h316.8" ] ],
+    [ "encoder:DT", "uno:3", "yellow", [ "h38.4", "v-95.9", "h297.6" ] ],
+    [ "encoder:SW", "uno:4", "purple", [ "h57.6", "v-134.3", "h268.8" ] ],
+    [ "encoder:VCC", "uno:5V", "red", [ "h105.6", "v125.2", "h163.2" ] ],
+    [ "encoder:GND", "uno:GND.3", "black", [ "h86.4", "v125.6", "h211.2" ] ],
+    [ "buzzer:2", "uno:8", "blue", [ "v0", "h47.6", "v-163.2", "h-249.6" ] ],
+    [ "uno:GND.1", "buzzer:1", "black", [ "v-57", "h316.5", "v192", "h-67.2" ] ]
+  ],
+  "dependencies": {}
+}
